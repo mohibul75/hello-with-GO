@@ -25,9 +25,22 @@ func main(){
 
 	printInWay(newCar)
 
+	makeRegistered(newCar)
+
+	printInWay(newCar)
+
+	anotherCar:= &Car{
+		name: "RTR",
+		model: "V5",
+	}
+
+	makeRegisteredInCorrectWay(anotherCar)
+	printInWay(*anotherCar)
+
 }
 
 func printInWay(rCar Car){
+	fmt.Println("-----------")
 	fmt.Println("Name ", rCar.name)
 	fmt.Println("Model ", rCar.model)
 	fmt.Println("isRegistered ", rCar.isRegister)
@@ -35,5 +48,14 @@ func printInWay(rCar Car){
 }
 
 func printCar(rCar Car){
+	fmt.Println("-----------")
 	fmt.Println(rCar)
+}
+
+func makeRegistered(rCar Car){   // wrong way to chane the value of struct's item
+	rCar.isRegister= true
+}
+
+func makeRegisteredInCorrectWay(rCar *Car){   // right way to chane the value of struct's item
+	rCar.isRegister= true
 }
