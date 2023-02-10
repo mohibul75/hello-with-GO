@@ -37,6 +37,14 @@ func main(){
 	makeRegisteredInCorrectWay(anotherCar)
 	printInWay(*anotherCar)
 
+	anOtherInterestingFunction(anotherCar)
+	printInWay(*anotherCar)
+
+
+}
+
+func anOtherInterestingFunction(rCar *Car){
+	rCar = &Car{"New Car","Model Changed",false,4}
 }
 
 func printInWay(rCar Car){
