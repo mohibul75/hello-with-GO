@@ -23,4 +23,15 @@ func main(){
 	for index, value:= range brr{
 		fmt.Println(" index  ",index+1,"  at  ",value)
 	}
+
+
+	/// Creating slice
+
+	fmt.Println("--------")
+	
+	slc:= []int{34,67,23,10}
+
+	for index, value:= range slc{
+		fmt.Println(" index  ",index+1,"  at  ",value)
+	}
 }
